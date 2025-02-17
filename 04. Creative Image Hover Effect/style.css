@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: gray;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: dimgrey;
+}
+
+.clip {
+  position: absolute;
+  border-radius: 10px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.7s;
+}
+
+.clip1 {
+  background-image: url(./assets/img1.jpg);
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(0 0, 15% 0, 30% 100%, 0 100%);
+}
+.clip2 {
+  background-position: center;
+  background-size: cover;
+  background-image: url(./assets/img2.jpg);
+  clip-path: polygon(14% 0, 45% 0, 65% 100%, 29% 100%);
+}
+.clip3 {
+  background-position: center;
+  background-size: cover;
+  background-image: url(./assets/img3.jpg);
+  clip-path: polygon(45% 0, 75% 0, 100% 100%, 65% 100%);
+}
+.clip4 {
+  background-size: cover;
+  background-position: center;
+  background-image: url(./assets/img4.jpg);
+  clip-path: polygon(74% 0, 100% 0, 100% 100%, 99% 100%);
+}
+section:hover .clip {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+section .clip:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
