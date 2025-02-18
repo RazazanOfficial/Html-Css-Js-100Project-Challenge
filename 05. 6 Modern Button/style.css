@@ -1,0 +1,152 @@
+/* --> General Styles <-- */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  font-size: 22px;
+}
+body {
+  background-color: gray;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+a {
+  margin: 0px auto;
+  padding: 2rem 4rem;
+}
+/* --> Btn1 <-- */
+.btn1 {
+  letter-spacing: 2px;
+  border: 2px solid aliceblue;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.btn1::before {
+  font-weight: bold;
+  content: "Download";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-100%);
+  transition: all 0.5s;
+  background-color: white;
+  color: black;
+}
+.btn1:hover::before {
+  transform: translateY(0%);
+}
+/* --> Btn2 <-- */
+.btn2 {
+  letter-spacing: 2px;
+  border: 2px solid aliceblue;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  position: relative;
+}
+.btn2::before {
+  font-weight: bold;
+  content: "Download";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(270deg);
+  transform-origin: top;
+  transition: all 1s;
+  background-color: wheat;
+  color: black;
+}
+.btn2::after {
+  font-weight: bold;
+  content: "Download";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(270deg);
+  transform-origin: bottom;
+  transition: all 1s;
+  background-color: wheat;
+  color: black;
+}
+.btn2:hover::before,
+.btn2:hover::after {
+  transform: rotateX(0);
+}
+/* --> Btn3 <-- */
+.btn3 {
+  letter-spacing: 2px;
+  /* border: 2px solid aliceblue; */
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  position: relative;
+}
+.btn3::before {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  width: 100%;
+  height: 100%;
+  background-color: #000b3f;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  transform-origin: top;
+  transition: all 0.2s;
+  transform-origin: top;
+}
+.btn3::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 100%;
+  height: 100%;
+  background-color: #00ffff;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  transform-origin: top;
+  transition: all 0.2s;
+  transform-origin: bottom;
+}
+.btn3:hover::before {
+  top: -6px;
+  left: 0;
+  transform: perspective(1000px) rotateX(75deg);
+}
+.btn3:hover::after {
+  top: 6px;
+  left: 0;
+  transform: perspective(1000px) rotateX(-75deg);
+}
