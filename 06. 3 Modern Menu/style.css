@@ -1,0 +1,159 @@
+/* --> General Styles <-- */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(34, 34, 34);
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* --> Menu1 Styles <-- */
+.menu1 ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.menu1 ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+}
+.menu1 ul li a::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  left: 0;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.75s;
+}
+.menu1 ul li a::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all 0.75s;
+}
+.menu1 ul li a:hover::before,
+.menu1 ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* --> Menu2 Styles <-- */
+.menu2 ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.menu2 ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+}
+.menu2 ul li a::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(2);
+  border-top: 2px solid crimson;
+  border-bottom: 2px solid crimson;
+  transition: all 1s;
+  opacity: 0;
+}
+.menu2 ul li a::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  background-color: rgba(220, 20, 60, 0.85);
+  transform: scale(0);
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+  opacity: 0;
+  z-index: -1;
+}
+.menu2 ul li a:hover::before {
+  transform: scaleY(1.2);
+  opacity: 1;
+}
+.menu2 ul li a:hover::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* --> Menu3 Styles <-- */
+.menu3 ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.menu3 ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+}
+.menu3 ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid white;
+  border-width: 0 0 3px 3px;
+  opacity: 0;
+  transition: all 0.6s;
+}
+.menu3 ul li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid white;
+  border-width: 3px 3px 0 0;
+  opacity: 0;
+  transition: all 0.6s;
+}
+.menu3 ul li a:hover::before {
+  opacity: 1;
+  bottom: -8px;
+  left: -8px;
+}
+.menu3 ul li a:hover::after {
+  opacity: 1;
+  top: -8px;
+  right: -8px;
+}
